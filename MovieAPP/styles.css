@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-image: url('marvel.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  color: #fff; 
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#suggestion-box {
+  position: absolute;
+  top: 40px; 
+  width: 300px; 
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#suggestion-box div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px; 
+  color: #333; 
+}
+
+#suggestion-box div:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+#view-wishlist {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#sort-select {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+#movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.movie-card {
+  position: relative;
+  width: 200px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 90%; 
+  max-width: 600px; 
+  max-height: 80%; 
+  overflow-y: auto; 
+}
+
+#wishlist {
+  display: none; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: white; 
+  padding: 20px; 
+  border-radius: 8px; 
+  width: 80%; 
+  max-width: 600px; 
+  height: auto; 
+  overflow-y: auto; 
+}
+
+#wishlist h2 {
+  margin: 0 0 20px; 
+}
+
+#wishlist-content {
+  max-height: 400px; 
+  overflow-y: auto; 
+}
+
+#wishlist-content div {
+  margin-bottom: 10px; 
+  display: flex; 
+  align-items: center; 
+}
+
+#wishlist-content img {
+  width: 50px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+#close-button,
+#close-wishlist {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#close-wishlist {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
